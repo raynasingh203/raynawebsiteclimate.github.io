@@ -1,33 +1,16 @@
 @font-face {
     font-family: "Patriot";
-    src: url("Patriot-v1.0/Fonts/Patriot-Medium.otf") format("truetype");
+    src: url("../Patriot-Medium.otf") format("truetype");
 }
 
-@font-face {
-    font-family: "Mattone";
-    src: url("/Users/raynasingh/Downloads/CLT-Mattone/desktop/Mattone-Black.otf") format("truetype");
 
-}
-@font-face {
-    font-family: "Phosphene";
-    src: url("/Users/raynasingh/Downloads/PhospheneFont-Regular.ttf") format("truetype");
-
-}
 
 @font-face {
     font-family: "V5000";
-    src: url("../vg5000-master/fonts/VG5000-Regular.otf") format("truetype");
+    src: url("../../vg5000-master/fonts/VG5000-Regular.otf") format("truetype");
 
 }
-@font-face {
-    font-family: "NicoMoji-Regular";
-    src: url("/Users/raynasingh/Library/Fonts/NicoMoji-Regular.ttf") format("truetype");
-}
 
-@font-face {
-    font-family: "Ultraprint";
-    src: url("/Users/raynasingh/Downloads/ultraprint_DCU/ultraprint.otf") format("truetype");
-}
 
 body {
     background-color: #ffffff; 
