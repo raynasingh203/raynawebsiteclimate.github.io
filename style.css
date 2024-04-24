@@ -1,0 +1,479 @@
+@font-face {
+    font-family: "Patriot";
+    src: url("Patriot-v1.0/Fonts/Patriot-Medium.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Mattone";
+    src: url("/Users/raynasingh/Downloads/CLT-Mattone/desktop/Mattone-Black.otf") format("truetype");
+
+}
+@font-face {
+    font-family: "Phosphene";
+    src: url("/Users/raynasingh/Downloads/PhospheneFont-Regular.ttf") format("truetype");
+
+}
+
+@font-face {
+    font-family: "V5000";
+    src: url("vg5000-master/fonts/VG5000-Regular.otf") format("truetype");
+
+}
+@font-face {
+    font-family: "NicoMoji-Regular";
+    src: url("/Users/raynasingh/Library/Fonts/NicoMoji-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Ultraprint";
+    src: url("/Users/raynasingh/Downloads/ultraprint_DCU/ultraprint.otf") format("truetype");
+}
+
+body {
+    background-color: #ffffff; 
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "V5000", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 110px;
+    background-image: url("card.jpeg");
+    }
+
+.wrapper {
+    max-width: 90%; 
+
+    margin: 0 auto;
+    padding: 20px; 
+    box-sizing: border-box; 
+   
+    display: grid; /*grid layout */
+    grid-template-columns: repeat(10, 1fr); 
+    grid-auto-rows: minmax(100px, auto); 
+    grid-gap: 15px; 
+}
+
+/* Style grid items */
+.wrapper div {
+    background-color: rgb(249, 249, 249); 
+   
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 60px;
+    padding: 20px; 
+    background-image: url();
+    box-sizing: border-box; 
+    box-shadow: rgba(51, 15, 255, 0.4) -5px 5px, rgba(172, 255, 29, 0.3) -10px 10px, rgba(12, 40, 255, 0.2) -15px 15px, rgba(255, 255, 255, 0.1) -20px 20px, rgba(255, 255, 255, 0.05) -25px 25px;
+}
+
+.grid1{
+   grid-column: 1/7;
+   grid-row: 1/2;
+   
+}
+.grid2 {
+    grid-column: 7/11;
+ 
+}
+.grid3 {
+    grid-column: 1/6;
+   grid-row : 2/6; 
+}
+.grid4{
+    grid-column : 6/11;
+}
+
+.grid5{
+    grid-column : 6/10;
+    grid-row : 3/6;
+}
+
+.grid6{ 
+    grid-column : 1/10; 
+    grid-row : 6/7
+}
+.grid7 {
+  
+    grid-row: 3
+}
+.grid8 {
+    
+    grid-row : 4/7
+}
+
+
+/* button styles  */
+.clickable-text, .clickable-text1, .logo {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px 10px;
+    font-size: 40px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: "Patriot";
+    border-radius: 40px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0 0 #000000, 4px 4px 0 1px #000;
+    cursor: pointer;
+}
+
+.clickable-text:hover, .clickable-text1:hover, .logo:hover {
+    background-color: rgb(231, 242, 204); 
+    text-decoration: none;
+}
+
+.clickable-text:active, .clickable-text1:active, .logo:active {
+    box-shadow: rgba(0, 0, 0, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.grid4 {
+    grid-column: 6/11;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: flex-start;
+    gap: 10px; 
+    height: 70px; 
+}
+
+.small-box {
+    width: 40px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 35px;
+    margin-right: 20px; 
+    margin-inline-start: 5px;
+    margin-top: auto;
+    margin: -15px 40px 30px 10px; 
+}
+
+.clickable-text1 {
+    display: inline-block;
+    margin: -20px 10px 16px 10px; 
+    padding: 10px 10px;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .clickable-text, .clickable-text1, .logo {
+        padding: 20px 10px; /* Larger padding on wider screens */
+    }
+}
+
+
+
+/* toggle button */
+
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 190px;
+    height: 40px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 40px;
+    transition: background-color 0.4s, color 0.3s;
+    color: black;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center; 
+    overflow: hidden; 
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 36px;
+    width: 36px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #000000;
+    color: white; 
+}
+
+input:checked + .slider .logout-text {
+    display: block; /* Show when toggled on */
+}
+
+input:checked + .slider .login-text {
+    display: none; /* Hide when toggled on */
+}
+
+.slider .logout-text {
+    display: none; /* Hide by default */
+}
+
+.slider .login-text {
+    display: block; /* Show by default */
+}
+
+input:not(:checked) + .slider .logout-text {
+    display: none;
+}
+
+input:not(:checked) + .slider .login-text {
+    display: block;
+}
+
+input:checked + .slider:before {
+    transform: translateX(150px); 
+}
+
+
+
+
+.grid3 {
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+}
+
+.grid3 a {
+    display: block; 
+    margin-right: 0; 
+}
+
+.grid3 img {
+    height: 500px; 
+    margin-right: 0px; 
+    transition: transform 0.3s; 
+}
+
+.grid3 img:last-child {
+    margin-right: 0; 
+}
+
+.grid3 img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/*width for individual images */
+.grid-image2 {
+    width: 80px; 
+    height: 400px;
+}
+
+.grid-image3 {
+    width: 120px; 
+}
+
+.grid-image5 {
+    width: 210px; 
+    height: 500px; 
+}
+
+
+.grid6 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+}
+
+.grid6 img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+}
+
+.top-left-text {
+    position: absolute;
+    top: 47px;
+    left: 110px;
+    font-size: 100px;
+    font-family: "V5000";
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), /* White glow */
+                 0 0 20px rgba(255, 255, 255, 0.5), /* White glow */
+                 0 0 30px rgba(255, 255, 255, 0.3), /* White glow */
+                 0 0 40px rgba(255, 255, 255, 0.2); /* White glow */
+}
+
+
+.grid5 {
+    grid-column: 6/10; 
+    grid-row: 3/6; 
+   
+    margin: -40px 10px 0px 10px; 
+
+}
+
+
+.top-text {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 10px;
+    font-family: "V5000";
+    left: 70px; /* Adjust the left position as needed */
+    font-size: 35px;
+    transform: rotate(90deg); /* Rotate the text vertically */
+    transform-origin: top left; /* Set the rotation origin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing content */
+    animation: scrollRightToLeft 15s linear infinite; /* Animation properties */
+}
+
+@keyframes scrollRightToLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.top-text1 {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 50px;
+    left: 70px; /* Adjust the left position as needed */
+    font-family: "V5000";
+    font-size: 45px;
+    transform: rotate(90deg); /* Rotate the text vertically */
+    transform-origin: top left; /* Set the rotation origin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: coolAnimation 10s linear infinite; /* Animation properties */
+}
+
+@keyframes coolAnimation {
+    0% {
+      transform: rotate(90deg);
+    }
+  
+    100% {
+      transform: rotate(90deg) translateX(-100vh);
+    }
+  }
+
+  .top-text2{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 50px;
+    left : 170px; 
+    font-family: "V5000";
+    font-size: 45px;
+    transform: rotate(90deg); /* Rotate the text vertically */
+    transform-origin: top left; /* Set the rotation origin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: coolAnimation 18s linear infinite; /* Animation properties */
+}
+.top-text3{
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 50px;
+    left : 1410px; 
+    font-family: "V5000";
+    font-size: 45px;
+    transform: rotate(90deg); /* Rotate the text vertically */
+    transform-origin: top left; /* Set the rotation origin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: coolAnimation 10s linear infinite; /* Animation properties */
+
+
+}
+
+
+.grid2 {
+   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden; /* Hide overflow content */
+  }
+  
+
+.small-image {
+width: 200px;
+height: 40px;
+margin: 0px 0px 20px 25px; 
+border-color: black;
+visibility: hidden;
+
+
+}
+
+.grid2-content {
+width: 600px;
+height: 100px;
+margin: 0px 0px 0px 20px; 
+
+
+}
+
+
+.top-text0{
+position: absolute;
+color: rgb(0, 0, 0);
+    top: 280px;
+    left : 1080px;
+    font-family: "V5000";
+    font-size: 15px;
+
+
+}
+  
+  .top-textline {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 160px;
+    font-family: "V5000";
+    left: 70px; /* Adjust the left position as needed */
+    font-size: 35px;
+    transform: rotate(90deg); /* Rotate the text vertically */
+    transform-origin: top left; /* Set the rotation origin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing content */
+    animation: scrollLeftToRight 15s linear infinite; /* Animation properties */
+}
+
+@keyframes scrollLeftToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+  
+  .grid-image9 {
+    width: 410px;
+height: 480px;
+margin: 0px 0px 0px 0px; 
+border-color: black;
+border: 3px solid rgb(0, 0, 0);
+    border-radius: 60px;
+    padding: 30px; 
+    box-sizing: border-box; 
+ 
+  }

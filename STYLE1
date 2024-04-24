@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Patriot";
+    src: url("Patriot-v1.0/Fonts/Patriot-Medium.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "V5000";
+    src: url("vg5000-master/fonts/VG5000-Regular.otf") format("truetype");
+
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: "V5000", 'Arial Narrow Bold', sans-serif;
+    padding-top: 110px;
+    background-color: #ffffff;
+}
+
+.book {
+    width: 1200px;   /* Width of the book */
+    height: 700px;  /* Height of the book */
+    display: flex;
+    margin-left: -100px;
+}
+
+.cover {
+    width: 50%;     /* Half the book's width */
+    background-color: black;
+    border-top-left-radius: 60px;   /* Rounded top-left corner for cover */
+    border-bottom-left-radius: 60px; /* Rounded bottom-left corner for cover */
+}
+
+.pages {
+    width: 50%;     /* Half the book's width */
+    background-color: rgb(205, 205, 205);
+    border-top-right-radius: 60px;  /* Rounded top-right corner for pages */
+    border-bottom-right-radius: 60px; /* Rounded bottom-right corner for pages */
+}
+
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 190px;
+    height: 40px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 40px;
+    transition: background-color 0.4s, color 0.3s;
+    color: black;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center; 
+    overflow: hidden; 
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 36px;
+    width: 36px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #000000;
+    color: white; 
+}
+
+input:checked + .slider .logout-text {
+    display: block; /* Show when toggled on */
+}
+
+input:checked + .slider .login-text {
+    display: none; /* Hide when toggled on */
+}
+
+.slider .logout-text {
+    display: none; /* Hide by default */
+}
+
+.slider .login-text {
+    display: block; /* Show by default */
+}
+
+input:not(:checked) + .slider .logout-text {
+    display: none;
+}
+
+input:not(:checked) + .slider .login-text {
+    display: block;
+}
+
+input:checked + .slider:before {
+    transform: translateX(150px); 
+}
+
+
+.top-rectangle {
+    width: 300px;   /* Width of the top rectangle */
+    height: 50px;  /* Height of the top rectangle */
+    background-color: rgb(255, 255, 255);  /* Example background color */
+    margin-bottom: 20px;  /* Spacing between top rectangle and cover */
+    border: 2px solid black;  /* Border style */
+    border-radius: 60px;  /* Rounded corners */
+    position: absolute;  /* Position relative to move it to the top */
+    top: 35px;  /* Move to the top */
+    left: 70px;
+}
+
+.text-inside {
+    display: block; /* Ensure the text takes the full width of the rectangle */
+    padding: 10px; /* Add padding inside the rectangle */
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-family: "V5000";
+    font-weight: bolder;
+}
+
+.top-rectangle1 {
+    width: 600px;   /* Width of the top rectangle */
+    height: 50px;  /* Height of the top rectangle */
+    background-color: rgb(255, 255, 255);  /* Example background color */
+    margin-bottom: 20px;  /* Spacing between top rectangle and cover */
+    border: 2px solid black;  /* Border style */
+    border-radius: 60px;  /* Rounded corners */
+    position: absolute;  /* Position relative to move it to the top */
+    top: 100px;  /* Move to the top */
+    left: 70px;
+}
+
+.top-rectangleright {
+    width: 600px;   /* Width of the top rectangle */
+    height: 70px;  /* Height of the top rectangle */
+    background-color: rgb(255, 255, 255);  /* Example background color */
+    margin-bottom: 20px;  /* Spacing between top rectangle and cover */
+    border: 2px solid black;  /* Border style */
+    border-radius: 60px;  /* Rounded corners */
+    position: absolute;  /* Position relative to move it to the top */
+    top: 80px;  /* Move to the top */
+    right: 70px;
+
+
+}
+
+.image1 {
+    width: 100px;
+    height: 10px;
+    position: absolute;
+   right: 150px; 
+   top: 80px; 
+}
