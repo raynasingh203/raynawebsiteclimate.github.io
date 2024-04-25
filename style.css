@@ -1,13 +1,13 @@
 @font-face {
     font-family: "Patriot";
-    src: url("../Patriot-Medium.otf") format("truetype");
+    src: url("./Patriot-Medium.otf") format("truetype");
 }
 
 
 
 @font-face {
     font-family: "V5000";
-    src: url("../../vg5000-master/fonts/VG5000-Regular.otf") format("truetype");
+    src: url("./vg5000-master/fonts/VG5000-Regular.otf") format("truetype");
 
 }
 
@@ -18,7 +18,7 @@ body {
     text-align: center;
     font-family: "V5000", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding-top: 110px;
-    background-image: url("card.jpeg");
+    background-image: url("w.jpeg");
     }
 
 .wrapper {
@@ -65,12 +65,12 @@ body {
 
 .grid5{
     grid-column : 6/10;
-    grid-row : 3/6;
+    
 }
 
 .grid6{ 
-    grid-column : 1/10; 
-    grid-row : 6/7
+    grid-column : 1/11; 
+    grid-row : 6;
 }
 .grid7 {
   
@@ -78,7 +78,7 @@ body {
 }
 .grid8 {
     
-    grid-row : 4/7
+    grid-row : 4/6
 }
 
 
@@ -314,9 +314,9 @@ input:checked + .slider:before {
 .top-text {
     position: absolute;
     color: rgb(0, 0, 0);
-    top: 10px;
+    top: -10px;
     font-family: "V5000";
-    left: 70px; /* Adjust the left position as needed */
+    left: 50px; /* Adjust the left position as needed */
     font-size: 35px;
     transform: rotate(90deg); /* Rotate the text vertically */
     transform-origin: top left; /* Set the rotation origin */
@@ -385,13 +385,6 @@ input:checked + .slider:before {
 }
 
 
-.grid2 {
-   
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    overflow: hidden; /* Hide overflow content */
-  }
   
 
 .small-image {
@@ -405,21 +398,26 @@ visibility: hidden;
 }
 
 .grid2-content {
-width: 600px;
+width: 140px;
 height: 100px;
 margin: 0px 0px 0px 20px; 
+border-radius: 60px;
 
-
+    
 }
+
+
+
 
 
 .top-text0{
 position: absolute;
 color: rgb(0, 0, 0);
-    top: 280px;
-    left : 1080px;
+    top: 225px;
+    left : 1020px;
     font-family: "V5000";
     font-size: 15px;
+    text-align: left;
 
 
 }
@@ -459,4 +457,14 @@ border: 3px solid rgb(0, 0, 0);
     padding: 30px; 
     box-sizing: border-box; 
  
+  }
+
+
+  .small-imagestar{
+    position: absolute;
+    width: 150px;
+    height:100px;
+    border-radius: 60px;
+   top: 225px;
+   right: 415px;
   }

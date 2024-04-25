@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Patriot";
-    src: url("Patriot-v1.0/Fonts/Patriot-Medium.otf") format("truetype");
+    src: url("./Patriot-v1.0/Fonts/Patriot-Medium.otf") format("truetype");
 }
 
 @font-face {
     font-family: "V5000";
-    src: url("vg5000-master/fonts/VG5000-Regular.otf") format("truetype");
+    src: url("./vg5000-master/fonts/VG5000-Regular.otf") format("truetype");
 
 }
 
@@ -20,29 +20,52 @@ body {
     font-family: "V5000", 'Arial Narrow Bold', sans-serif;
     padding-top: 110px;
     background-color: #ffffff;
+    background-image: url("w.jpeg");
 }
 
 .book {
     width: 1200px;   /* Width of the book */
-    height: 700px;  /* Height of the book */
+    height: 900px;  /* Height of the book */
     display: flex;
     margin-left: -100px;
+    position: absolute;
+    top:250px; 
+    
 }
 
 .cover {
     width: 50%;     /* Half the book's width */
-    background-color: black;
+    background-color: rgba(229, 243, 6, 1);
     border-top-left-radius: 60px;   /* Rounded top-left corner for cover */
     border-bottom-left-radius: 60px; /* Rounded bottom-left corner for cover */
+    overflow-y:scroll ;
+
 }
+
+.book .cover .inner-rectangle img {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid black; /* Example border */
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;; /* Example rounded borders */
+}
+
+.highlight {
+    background-color: rgb(195, 255, 65);
+}
+.highlight1 {
+    background-color: rgb(255, 117, 225);
+}
+
 
 .pages {
-    width: 50%;     /* Half the book's width */
+    width: 50%;
     background-color: rgb(205, 205, 205);
-    border-top-right-radius: 60px;  /* Rounded top-right corner for pages */
-    border-bottom-right-radius: 60px; /* Rounded bottom-right corner for pages */
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    overflow-y: scroll; /* Always show vertical scrollbar */
+    overflow-x: hidden;
 }
-
 .toggle-container {
     position: absolute;
     top: 20px;
@@ -124,8 +147,8 @@ input:checked + .slider:before {
 
 
 .top-rectangle {
-    width: 300px;   /* Width of the top rectangle */
-    height: 50px;  /* Height of the top rectangle */
+    width: 330px;   /* Width of the top rectangle */
+    height: 90px;  /* Height of the top rectangle */
     background-color: rgb(255, 255, 255);  /* Example background color */
     margin-bottom: 20px;  /* Spacing between top rectangle and cover */
     border: 2px solid black;  /* Border style */
@@ -133,15 +156,54 @@ input:checked + .slider:before {
     position: absolute;  /* Position relative to move it to the top */
     top: 35px;  /* Move to the top */
     left: 70px;
+    box-shadow: 4px 4px 0 0 #000000, 4px 4px 0 1px #000;
 }
 
 .text-inside {
-    display: block; /* Ensure the text takes the full width of the rectangle */
-    padding: 10px; /* Add padding inside the rectangle */
-    font-size: 24px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Make the text fill the entire height of the rectangle */
+   
+    font-size: 40px;
     color: rgb(0, 0, 0);
-    font-family: "V5000";
+    font-family: "Patriot";
     font-weight: bolder;
+}
+
+.text-inside1 {
+   position: absolute;
+    top: 10px;  /* Move to the top */
+    left: 480px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-family: "Patriot";
+    font-weight: bolder;
+}
+
+/* CSS for slider texts */
+.slider-text1,
+.slider-text2,
+.slider-text3 {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-left: 70px;
+    padding-top: 20px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-family: "Patriot";
+    font-weight: bolder;
+    cursor: pointer; /* Add cursor pointer to indicate clickable */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Change text color on hover for all slider texts */
+.slider-text1:hover,
+.slider-text2:hover,
+.slider-text3:hover{
+    color: rgb(168, 168, 168); /* Change to desired color on hover */
 }
 
 .top-rectangle1 {
@@ -152,8 +214,9 @@ input:checked + .slider:before {
     border: 2px solid black;  /* Border style */
     border-radius: 60px;  /* Rounded corners */
     position: absolute;  /* Position relative to move it to the top */
-    top: 100px;  /* Move to the top */
+    top: 150px;  /* Move to the top */
     left: 70px;
+    box-shadow: 4px 4px 0 0 #000000, 4px 4px 0 1px #000;
 }
 
 .top-rectangleright {
@@ -166,14 +229,67 @@ input:checked + .slider:before {
     position: absolute;  /* Position relative to move it to the top */
     top: 80px;  /* Move to the top */
     right: 70px;
+    box-shadow: 4px 4px 0 0 #000000, 4px 4px 0 1px #000;
 
 
 }
 
 .image1 {
     width: 100px;
-    height: 10px;
+    height: 100px; /* Adjust the height as needed */
     position: absolute;
-   right: 150px; 
-   top: 80px; 
+    right: 150px;
+    top: 0px;
+    transition: transform 0.3s ease; /* Add transition for smooth animation */
+    z-index: 1; /* Ensure the image appears in front */
 }
+
+.image1:hover img {
+    transform: scale(1.1) rotate(-15deg); /* Scale up by 10% and rotate -5 degrees on hover */
+}
+
+
+.text-inside:hover{
+    border-radius: 40px;
+    border: 2px solid black;
+    transition: all 0.6s ease;
+    box-shadow: 4px 4px 0 0 #000000, 4px 4px 0 1px #000;
+    
+
+}
+.text-inside:active{
+    box-shadow: rgba(0, 0, 0, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+
+  
+
+
+.slider{
+    font-family: "Patriot";
+}
+
+
+
+.small-box {
+    display:inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 35px;
+    margin-right: 20px; 
+    margin-inline-start: 5px;
+ 
+    margin: 3px 40px 30px 10px; 
+}
+
+.star{
+    font-size: 25px;
+    position:absolute;
+    top: 40px;
+    right:100px;
+    color: #ccc;
+
+}
+
+

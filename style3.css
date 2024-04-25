@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Patriot";
+    src: url("./Patriot-Medium.otf") format("truetype");
+}
+
+
+
+@font-face {
+    font-family: "V5000";
+    src: url("./vg5000-master/fonts/VG5000-Regular.otf") format("truetype");
+
+}
+
+
+body {
+    background-color: #ffffff; 
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "V5000", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 110px;
+    background-image: url("w.jpeg");
+    }
+
+
+    .toggle-container {
+        position: absolute;
+        top: 20px;
+        right: 100px;
+    }
+    
+    .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 190px;
+        height: 40px;
+    }
+    
+    .toggle-switch input {
+        display: none;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        border-radius: 40px;
+        transition: background-color 0.4s, color 0.3s;
+        color: black;
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center; 
+        overflow: hidden; 
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 36px;
+        width: 36px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.4s;
+    }
+    
+    input:checked + .slider {
+        background-color: #000000;
+        color: white; 
+    }
+    
+    input:checked + .slider .logout-text {
+        display: block; /* Show when toggled on */
+    }
+    
+    input:checked + .slider .login-text {
+        display: none; /* Hide when toggled on */
+    }
+    
+    .slider .logout-text {
+        display: none; /* Hide by default */
+    }
+    
+    .slider .login-text {
+        display: block; /* Show by default */
+    }
+    
+    input:not(:checked) + .slider .logout-text {
+        display: none;
+    }
+    
+    input:not(:checked) + .slider .login-text {
+        display: block;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(150px); 
+    }
+    
+    
+
+    .top-rectangle {
+        width: 320px;   /* Width of the top rectangle */
+        height: 90px;  /* Height of the top rectangle */
+        background-color: rgb(255, 255, 255);  /* Example background color */
+        margin-bottom: 20px;  /* Spacing between top rectangle and cover */
+        border: 2px solid black;  /* Border style */
+        border-radius: 60px;  /* Rounded corners */
+        position: absolute;  /* Position relative to move it to the top */
+        top: 35px;  /* Move to the top */
+        left: 70px;
+        box-shadow: 4px 4px 0 0 #000000, 4px 4px 0 1px #000;
+    }
+    
+    .text-inside {
+        position: absolute;
+        top: 18px;
+        left: 30px;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        font-size: 40px;
+        color: rgb(17, 15, 15);
+        font-family: "Patriot";
+        font-weight: bolder;
+    }
+
+    .alpha {
+        display: inline-block;
+        top: 18px;
+        left: 30px;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        font-size: 40px;
+        color: rgb(17, 15, 15);
+        font-family: "Patriot";
+        font-weight: bolder;
+    }
+
+
+    .intro {
+        background: #1A1A1A; 
+        padding: 20px;
+        color: #BBB;
+      }
+      
+   
+      .grid-container {
+        display: grid;
+        grid-template-columns: 200px auto 300px;
+        grid-template-rows: auto auto auto;
+        
+       
+      }
+      
+    
+      .grid-container > div {
+        border: 1px solid #444;
+        padding: 30px;
+      }
+      
+  
+      .sidebar-uno {
+        grid-column: 1;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+      }
+      
+  
+      .content {
+        grid-column: 2;
+        grid-row-start: 1;
+        grid-row-end: span 2;
+      }
+      
+    
+      .sidebar-dos {
+        grid-column: 3;
+        grid-row: 1;
+      }
+
+      .promo {
+        grid-column: 3;
+        grid-row: 2;
+      }
+      
+      .span full grid
+      .related {
+        grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row: 3;
+      }
+      
+     
+      .sidebar-uno {
+        background: #BADA55;
+      }
+      .content {
+        background: #000000;
+      }
+      .sidebar-dos {
+        background: #C55;
+      }
+      .promo {
+        background: #D3C0D3;
+      }
+      .related {
+        background: #BEE;
+      }

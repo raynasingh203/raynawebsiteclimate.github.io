@@ -1,0 +1,322 @@
+@font-face {
+    font-family: "Patriot";
+    src: url("./Patriot-Medium.otf") format("truetype");
+}
+
+
+
+@font-face {
+    font-family: "V5000";
+    src: url("./vg5000-master/fonts/VG5000-Regular.otf") format("truetype");
+
+}
+
+
+body {
+    background-color: #ffffff; 
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: "V5000", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 110px;
+    background-image: url("w.jpeg");
+    }
+
+
+    .toggle-container {
+        position: absolute;
+        top: 20px;
+        right: 100px;
+    }
+    
+    .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 190px;
+        height: 40px;
+    }
+    
+    .toggle-switch input {
+        display: none;
+    }
+    
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        border-radius: 40px;
+        transition: background-color 0.4s, color 0.3s;
+        color: black;
+        font-size: 16px;
+        line-height: 40px;
+        text-align: center; 
+        overflow: hidden; 
+    }
+    
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 36px;
+        width: 36px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.4s;
+    }
+    
+    input:checked + .slider {
+        background-color: #000000;
+        color: white; 
+    }
+    
+    input:checked + .slider .logout-text {
+        display: block; /* Show when toggled on */
+    }
+    
+    input:checked + .slider .login-text {
+        display: none; /* Hide when toggled on */
+    }
+    
+    .slider .logout-text {
+        display: none; /* Hide by default */
+    }
+    
+    .slider .login-text {
+        display: block; /* Show by default */
+    }
+    
+    input:not(:checked) + .slider .logout-text {
+        display: none;
+    }
+    
+    input:not(:checked) + .slider .login-text {
+        display: block;
+    }
+    
+    input:checked + .slider:before {
+        transform: translateX(150px); 
+    }
+    
+    
+
+    .top-rectangle {
+        width: 520px;   /* Width of the top rectangle */
+        height: 90px;  /* Height of the top rectangle */
+        background-color: rgb(255, 255, 255);  /* Example background color */
+        margin-bottom: 20px;  /* Spacing between top rectangle and cover */
+        border: 2px solid black;  /* Border style */
+        border-radius: 60px;  /* Rounded corners */
+        position: absolute;  /* Position relative to move it to the top */
+        top: 35px;  /* Move to the top */
+        left: 70px;
+        box-shadow: 4px 4px 0 0 #000000, 4px 4px 0 1px #000;
+    }
+    
+    .text-inside {
+        position: absolute;
+        top: 18px;
+        left: 30px;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        font-size: 40px;
+        color: rgb(17, 15, 15);
+        font-family: "Patriot";
+        font-weight: bolder;
+    }
+
+    .alpha {
+        display: inline-block;
+        top: 18px;
+        left: 30px;
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        font-size: 40px;
+        color: rgb(17, 15, 15);
+        font-family: "Patriot";
+        font-weight: bolder;
+    }
+
+    /* keyboard */
+    .keyboard-base {
+        max-width: 800px; /* Decreased max-width */
+        padding: 10px; /* Decreased padding */
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(237, 238, 215);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(20, 30px); /* Decreased columns */
+        grid-template-rows: repeat(4, 50px); /* Decreased rows */
+        grid-gap: 5px;
+    }
+    
+    .key {
+        background-color: rgb(0, 0, 0);
+        border: 2px solid black;
+        border-radius: 5px;
+        font-size: 16px; /* Adjusted font size */
+        text-align: center;
+        padding-top: 12px; /* Adjusted padding */
+    }
+    
+    .key:hover {
+        border: 1px solid #eeeeee; /* Adjusted hover border */
+    }
+    
+    .delete {
+        grid-column: span 3; /* Decreased span */
+    }
+    
+    .tab {
+        grid-column: span 2; /* Decreased span */
+    }
+    
+    .backslash,
+    .capslock,
+    .return,
+    .leftshift,
+    .rightshift {
+        grid-column: span 3; /* Decreased span */
+    }
+    
+    .leftctrl,
+    .command {
+        grid-column: span 2; /* Decreased span */
+        font-size: 14px; /* Adjusted font size */
+    }
+    
+    .space {
+        grid-column: span 8; /* Decreased span */
+    }
+    
+
+    .folder{
+        width: 430px; /* Adjust the maximum width as needed */
+        height: 430px; /* Adjust the maximum height as needed */
+        position: absolute;
+        right: 510px;
+       top:120px /* Centers the image horizontally within the div */
+    }
+
+
+    /* Style for the black rectangle container */
+.black-rectangle {
+    position: absolute;
+    left: 20px;
+    top: 190px;
+    width: 315px;
+    height: 500px;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 4px 4px 0 0 #7aff0c, 4px 4px 0 1px #5f5f5f;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust vertical distance between rectangles */
+    overflow-y: auto;
+}
+
+.rectangle {
+    width: 85%;
+    background-color: #333; /* Darker gray color */
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.alarmist {
+    color: red; /* Style Alarmist text in red */
+}
+
+.scientist {
+    color: rgb(68, 255, 0); /* Style Scientist text in green */
+}
+
+.rectangle1,
+.rectangle3,
+.rectangle5,
+.rectangle7,
+.rectangle9 {
+    align-self: flex-start; /* Left-align odd-numbered rectangles */
+}
+
+.rectangle2,
+.rectangle4,
+.rectangle6,
+.rectangle8,
+.rectangle10{
+    align-self: flex-end; /* Right-align even-numbered rectangles */
+}
+
+    
+
+/* Style for the black rectangle container */
+.black-rectangle2 {
+    position: absolute;
+    left: 800px;
+    top: -30px;
+    width: 515px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 4px 4px 0 0 #7aff0c, 4px 4px 0 1px #5f5f5f;
+}
+
+
+/* Style for the chat boxes container */
+.container2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjust vertical distance between chat boxes */
+    overflow-y: auto;
+}
+
+/* Style for each chat box */
+.chat-box {
+    height: 50px; /* Adjust height as needed */
+    background-color: #333; /* Darker gray color */
+    border-radius: 5px;
+}
+
+.chat-box input[type="text"] {
+    width: calc(100% - 20px); /* Adjust the input width to fit inside the chat box */
+    height: 60px; /* Adjust the input height */
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+.black-rectangle3 {
+    position: absolute;
+    left: 1090px;
+    top: 100px;
+    width: 195px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 4px 4px 0 0 #7aff0c, 4px 4px 0 1px #5f5f5f;
+}

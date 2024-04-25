@@ -1,0 +1,4 @@
+@font-face {
+    font-family: "NicoMoji-Regular";
+    src: url("/Users/raynasingh/Library/Fonts/NicoMoji-Regular.ttf") format("truetype");
+}
